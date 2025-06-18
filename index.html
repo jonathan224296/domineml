@@ -68,8 +68,14 @@
     <!-- Rest of the content - Initially Hidden -->
     <div id="rest-of-content" style="display: none;">
         <div class="main-cta">
+            <div class="secure-checkout-message" style="text-align: center; margin-bottom: 15px; padding: 10px; background: rgba(255, 255, 255, 0.1); border-radius: 8px;">
+                <p style="color: #fff; margin: 0;">
+                    <span style="color: #FFD600;">🔒 Pagamento 100% Seguro:</span> Seu checkout será processado pela Kirvano, 
+                    uma das plataformas mais seguras do mercado, garantindo total proteção aos seus dados.
+                </p>
+            </div>
             <a href="https://pay.kirvano.com/8e1e56f2-bb11-4fd9-bc82-403107999426" target="_blank" class="cta-button-main">
-                🔐 QUERO TER ACESSO AO MANUAL AGORA!
+                QUERO SOLUCIONAR TUDO ISSO!
             </a>
         </div>
 
@@ -133,8 +139,14 @@
             </div>
 
             <div class="cta-container">
+                <div class="secure-checkout-message" style="text-align: center; margin-bottom: 15px; padding: 10px; background: rgba(255, 255, 255, 0.1); border-radius: 8px;">
+                    <p style="color: #fff; margin: 0;">
+                        <span style="color: #FFD600;">🔒 Pagamento 100% Seguro:</span> Seu checkout será processado pela Kirvano, 
+                        uma das plataformas mais seguras do mercado, garantindo total proteção aos seus dados.
+                    </p>
+                </div>
                 <a href="https://pay.kirvano.com/8e1e56f2-bb11-4fd9-bc82-403107999426" target="_blank" class="cta-button">
-                    Quero solucionar tudo isso!
+                    QUERO SOLUCIONAR TUDO ISSO!
                 </a>
             </div>
         </section>
@@ -191,8 +203,14 @@
             </div>
 
             <div class="cta-container">
+                <div class="secure-checkout-message" style="text-align: center; margin-bottom: 15px; padding: 10px; background: rgba(255, 255, 255, 0.1); border-radius: 8px;">
+                    <p style="color: #fff; margin: 0;">
+                        <span style="color: #FFD600;">🔒 Pagamento 100% Seguro:</span> Seu checkout será processado pela Kirvano, 
+                        uma das plataformas mais seguras do mercado, garantindo total proteção aos seus dados.
+                    </p>
+                </div>
                 <a href="https://pay.kirvano.com/8e1e56f2-bb11-4fd9-bc82-403107999426" target="_blank" class="cta-button">
-                    Quero destravar minha loja!
+                    QUERO SOLUCIONAR TUDO ISSO!
                 </a>
             </div>
         </section>
@@ -279,9 +297,51 @@
                     <p class="payment-info">pagamento único</p>
                     
                     <div class="cta-container">
+                        <div class="secure-checkout-message" style="text-align: center; margin-bottom: 15px; padding: 10px; background: rgba(255, 255, 255, 0.1); border-radius: 8px;">
+                            <p style="color: #fff; margin: 0;">
+                                <span style="color: #FFD600;">🔒 Pagamento 100% Seguro:</span> Seu checkout será processado pela Kirvano, 
+                                uma das plataformas mais seguras do mercado, garantindo total proteção aos seus dados.
+                            </p>
+                        </div>
                         <a href="https://pay.kirvano.com/8e1e56f2-bb11-4fd9-bc82-403107999426" target="_blank" class="cta-button-final">
-                            🔐 ADQUIRIR AGORA!
+                            QUERO SOLUCIONAR TUDO ISSO!
                         </a>
+                        
+                        <!-- Ícones de Segurança e Pagamento -->
+                        <div class="payment-security" style="text-align: center; margin-top: 20px; padding: 15px;">
+                            <div class="security-badges" style="display: flex; justify-content: center; gap: 30px; margin-bottom: 15px;">
+                                <div style="text-align: center;">
+                                    <span style="font-size: 2em; color: #808080;">🛡️</span>
+                                    <p style="margin: 5px 0; color: #808080; font-size: 0.9em;">
+                                        <strong>Checkout</strong><br>Seguro
+                                    </p>
+                                </div>
+                                <div style="text-align: center;">
+                                    <span style="font-size: 2em; color: #808080;">🏆</span>
+                                    <p style="margin: 5px 0; color: #808080; font-size: 0.9em;">
+                                        <strong>Satisfação</strong><br>Garantida
+                                    </p>
+                                </div>
+                                <div style="text-align: center;">
+                                    <span style="font-size: 2em; color: #808080;">🔒</span>
+                                    <p style="margin: 5px 0; color: #808080; font-size: 0.9em;">
+                                        <strong>Privacidade</strong><br>Protegida
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <div class="payment-methods" style="margin-top: 15px;">
+                                <p style="color: #808080; font-size: 0.8em; margin-bottom: 10px;">PAGUE COM SEGURANÇA</p>
+                                <div style="display: flex; justify-content: center; gap: 15px; align-items: center;">
+                                    <span style="color: #808080; font-size: 1.5em;">💳</span>
+                                    <span style="color: #808080; font-size: 1.5em;">Kirvano</span>
+                                    <span style="color: #808080; font-size: 1.5em;">Visa</span>
+                                    <span style="color: #808080; font-size: 1.5em;">Mastercard</span>
+                                    <span style="color: #808080; font-size: 1.5em;">PayPal</span>
+                                    <span style="color: #808080; font-size: 1.5em;">Pix</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -357,15 +417,14 @@
                     }
                 });
 
-                // Força o play se houver pausa
-                player.on('pause', () => {
-                    setTimeout(() => player.play(), 100);
+                // Remove o comportamento de forçar play ao pausar
+                player.on('ended', function() {
+                    // Não faz nada quando o vídeo termina, permitindo que ele fique parado no último frame
                 });
 
                 // Monitora erros
                 player.on('error', function(error) {
                     console.error('Erro no player:', error);
-                    setTimeout(() => player.play(), 1000);
                 });
 
             } catch (error) {

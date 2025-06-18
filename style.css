@@ -162,29 +162,46 @@ body {
     justify-content: center;
 }
 
-.cta-button-main {
-    background: linear-gradient(135deg, #f59e0b, #f97316);
-    color: #000;
-    padding: 15px 30px;
-    font-size: clamp(18px, 4vw, 24px);
-    font-weight: 800;
-    border-radius: 50px;
-    text-decoration: none;
+.cta-button-main,
+.cta-button,
+.cta-button-final {
     display: inline-block;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    box-shadow: 0 10px 25px rgba(245, 158, 11, 0.4);
-    transition: all 0.3s ease;
-    margin: 20px auto;
+    padding: 20px 40px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
     text-align: center;
+    color: #000000;
+    background-color: #FF9900;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
     width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
+    max-width: 500px;
+    margin: 10px auto;
+    box-shadow: 0 0 20px rgba(255, 153, 0, 0.5);
+    animation: glowPulse 2s infinite;
 }
 
-.cta-button-main:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 35px rgba(245, 158, 11, 0.6);
+.cta-button-main:hover,
+.cta-button:hover,
+.cta-button-final:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(255, 153, 0, 0.7);
+}
+
+@keyframes glowPulse {
+    0% {
+        box-shadow: 0 0 20px rgba(255, 153, 0, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(255, 153, 0, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 153, 0, 0.5);
+    }
 }
 
 /* Section Styles */
@@ -481,31 +498,6 @@ body {
 .cta-container {
     text-align: center;
     margin: 40px 0;
-}
-
-.cta-button, .cta-button-final {
-    background: linear-gradient(135deg, #f59e0b, #f97316);
-    color: #000;
-    padding: 18px 40px;
-    font-size: 18px;
-    font-weight: 700;
-    border-radius: 50px;
-    text-decoration: none;
-    display: inline-block;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    box-shadow: 0 8px 20px rgba(245, 158, 11, 0.4);
-    transition: all 0.3s ease;
-}
-
-.cta-button-final {
-    font-size: 22px;
-    padding: 20px 50px;
-}
-
-.cta-button:hover, .cta-button-final:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(245, 158, 11, 0.6);
 }
 
 /* Final Warning */
