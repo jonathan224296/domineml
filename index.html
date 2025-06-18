@@ -6,64 +6,72 @@
     <title>🧠 DOMINE O ML — O MANUAL OCULTO DOS MESTRES DO MARKETPLACE</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://player.vimeo.com/api/player.js"></script>
 </head>
 <body>
-    <!-- Header Alert -->
-    <div class="alert-banner">
-        <span>⚠️ Conteúdo disponível até nova remoção. A plataforma pode derrubar a qualquer momento.</span>
-    </div>
+    <!-- Conteúdo Superior - Sempre Visível -->
+    <div id="top-content">
+        <!-- Alert Banner -->
+        <div class="alert-banner">
+            <span>⚠️ Conteúdo disponível até nova remoção. A plataforma pode derrubar a qualquer momento.</span>
+        </div>
 
-    <!-- Warning Message -->
-    <div class="warning-message">
-        <span>⚠️ Manual que já foi censurado duas vezes. Acesso por tempo limitado.</span>
-    </div>
+        <!-- Warning Message -->
+        <div class="warning-message">
+            <span>⚠️ Manual que já foi censurado duas vezes. Acesso por tempo limitado.</span>
+        </div>
 
-    <!-- Countdown Timer -->
-    <div class="countdown-timer">
-        <p>⏰ Oferta expira em:</p>
-        <div id="timer">
-            <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+        <!-- Countdown Timer -->
+        <div class="countdown-timer">
+            <p>⏰ Oferta expira em:</p>
+            <div id="timer">
+                <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+            </div>
         </div>
     </div>
 
-    <!-- Main Container -->
-    <div class="container">
-        <!-- Hero Section -->
-        <section class="hero">
-            <h1 class="main-title">
-                A única estratégia no Brasil que vai escalar seu negócio no Mercado Livre para<br>
-                <span class="highlight-title">múltiplos 5 e 6 dígitos mensais.</span>
-            </h1>
+    <!-- Video Section -->
+    <div class="video-section" id="video-section">
+        <div class="vimeo-responsive" style="padding:56.25% 0 0 0;position:relative;">
+            <iframe id="vimeo-player" 
+                src="https://player.vimeo.com/video/1094063279?h=08023a6e70&autoplay=1&loop=0&title=0&byline=0&portrait=0&controls=0&dnt=1&muted=1&background=0&quality=1080p" 
+                style="position:absolute;top:0;left:0;width:100%;height:100%;border:3px solid #FFD600;border-radius:12px;" 
+                frameborder="0" 
+                allow="autoplay; fullscreen"
+                allowfullscreen
+                webkitallowfullscreen 
+                mozallowfullscreen></iframe>
             
-            <p class="subtitle">
-                Tenha um sistema em seu negócio que já gerou <strong>milhões em vendas</strong> acumuladas usando táticas que o ML não quer que você descubra
-            </p>
+            <!-- Botão de Ativar Áudio -->
+            <div id="unmute-button" class="unmute-overlay">
+                <button class="unmute-button">
+                    <span class="unmute-icon">🔊</span>
+                    <span class="unmute-text">CLIQUE PARA ATIVAR O ÁUDIO</span>
+                </button>
+            </div>
+        </div>
+        <p class="video-caption">
+            🎯 <strong>ASSISTA AGORA:</strong> Revelações que podem mudar sua estratégia no ML para sempre
+        </p>
+    </div>
 
-            <!-- Video Section -->
-            <div class="video-section">
-                <div class="vimeo-responsive" style="padding:56.25% 0 0 0;position:relative;">
-                    <iframe src="https://player.vimeo.com/video/1093540752?h=30106bbf0e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="202506131949"></iframe>
-                </div>
-                <p class="video-caption">
-                    🎯 <strong>ASSISTA AGORA:</strong> Revelações que podem mudar sua estratégia no ML para sempre
-                </p>
-            </div>
-            <script src="https://player.vimeo.com/api/player.js"></script>
-            <div class="important-warning">
-                <span style="font-size:1.3em;display:block;text-align:center;margin-bottom:10px;">
-                    <span style="font-size:1.2em;">🛡️</span> <strong style="color:#FFD600;">IMPORTANTE</strong>
-                </span>
-                <p style="color:#fff;">Todas as estratégias ensinadas no manual são executadas de forma <span style="color:#FFD600;font-weight:bold;">externa e anônima</span>, sem a necessidade de acessar sua conta de vendedor no Mercado Livre.</p>
-                <p style="color:#fff;">Isso significa que <span style="color:#FFD600;font-weight:bold;">nenhuma ação será feita dentro da sua loja</span>, e não há qualquer risco de <span style="color:#FFD600;font-weight:bold;">bloqueio, suspensão ou penalidade</span> no seu perfil de vendedor.</p>
-                <p style="color:#fff;">As táticas são aplicadas com contas intermediárias, bots e mecanismos que operam fora da sua operação oficial. <span style="color:#FFD600;font-weight:bold;">Você permanece 100% protegido</span> enquanto colhe os benefícios.</p>
-            </div>
+    <!-- Conteúdo Inicial - Sempre Visível -->
+    <div class="important-warning">
+        <span style="font-size:1.3em;display:block;text-align:center;margin-bottom:10px;">
+            <span style="font-size:1.2em;">🛡️</span> <strong style="color:#FFD600;">IMPORTANTE</strong>
+        </span>
+        <p style="color:#fff;">Todas as estratégias ensinadas no manual são executadas de forma <span style="color:#FFD600;font-weight:bold;">externa e anônima</span>, sem a necessidade de acessar sua conta de vendedor no Mercado Livre.</p>
+        <p style="color:#fff;">Isso significa que <span style="color:#FFD600;font-weight:bold;">nenhuma ação será feita dentro da sua loja</span>, e não há qualquer risco de <span style="color:#FFD600;font-weight:bold;">bloqueio, suspensão ou penalidade</span> no seu perfil de vendedor.</p>
+        <p style="color:#fff;">As táticas são aplicadas com contas intermediárias, bots e mecanismos que operam fora da sua operação oficial. <span style="color:#FFD600;font-weight:bold;">Você permanece 100% protegido</span> enquanto colhe os benefícios.</p>
+    </div>
 
-            <div class="main-cta">
-                <a href="https://pay.kirvano.com/8e1e56f2-bb11-4fd9-bc82-403107999426" target="_blank" class="cta-button-main">
-                    🔐 QUERO TER ACESSO AO MANUAL AGORA!
-                </a>
-            </div>
-        </section>
+    <!-- Rest of the content - Initially Hidden -->
+    <div id="rest-of-content" style="display: none;">
+        <div class="main-cta">
+            <a href="https://pay.kirvano.com/8e1e56f2-bb11-4fd9-bc82-403107999426" target="_blank" class="cta-button-main">
+                🔐 QUERO TER ACESSO AO MANUAL AGORA!
+            </a>
+        </div>
 
         <!-- Benefits Section -->
         <section class="benefits-section">
@@ -190,26 +198,46 @@
         </section>
 
         <!-- Testimonials Section -->
-        <section class="testimonials">
-            <h2 class="section-title">Resultados de quem já usa o MANUAL OCULTO:</h2>
-            
-            <div class="testimonial-grid">
-                <div class="testimonial">
-                    <img src="1.jpg" alt="Usuário 1" style="width:100%;max-width:120px;border-radius:10px;margin-bottom:10px;display:block;margin-left:auto;margin-right:auto;" />
-                    <h4>Marcus R.</h4>
-                    <p>"Usei as técnicas secretas, disparei nas vendas e faturei R$45.000 no primeiro mês aplicando as estratégias."</p>
-                </div>
-                <div class="testimonial">
-                    <img src="2.jpg" alt="Usuário 2" style="width:100%;max-width:120px;border-radius:10px;margin-bottom:10px;display:block;margin-left:auto;margin-right:auto;" />
-                    <h4>Carla S.</h4>
-                    <p>"Inacreditável! Consegui dominar meus concorrentes e hoje faturo 10x mais que antes."</p>
-                </div>
-                <div class="testimonial">
-                    <img src="3.jpg" alt="Usuário 3" style="width:100%;max-width:120px;border-radius:10px;margin-bottom:10px;display:block;margin-left:auto;margin-right:auto;" />
-                    <h4>Roberto M.</h4>
-                    <p>"As táticas de manipulação do algoritmo mudaram meu jogo completamente. Recomendo!"</p>
-                </div>
+        <section style="background-color:#000; padding:60px 20px; color:white; font-family:sans-serif;">
+          <h2 style="text-align:center; font-size:28px; margin-bottom:10px;">
+            🔥 Já são mais de <span style="color:#00ff99;">2.378 alunos</span> aplicando o MANUAL OCULTO
+          </h2>
+          <p style="text-align:center; font-size:16px; margin-bottom:40px;">Veja o que alguns deles estão dizendo:</p>
+
+          <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px;">
+
+            <!-- Marcus -->
+            <div style="background-color:#002d26; border-radius:12px; padding:20px; width:300px;">
+              <img src="imagens/marcus.jpg" alt="Marcus R." style="border-radius:8px; width:100%; height:auto; margin-bottom:15px;">
+              <h3 style="color:#00ff99; margin:0;">Marcus R.</h3>
+              <p style="font-size:14px;">⭐⭐⭐⭐⭐</p>
+              <p style="font-style:italic;">"Usei as técnicas secretas, disparei nas vendas e faturei <b>R$45.000 no primeiro mês</b> aplicando as estratégias."</p>
+              <span style="background:#ffcc00; color:#000; padding:4px 8px; border-radius:6px; font-size:12px;">🔒 Aprovado Oficialmente</span>
             </div>
+
+            <!-- Carla -->
+            <div style="background-color:#002d26; border-radius:12px; padding:20px; width:300px;">
+              <img src="imagens/carla.jpg" alt="Carla S." style="border-radius:8px; width:100%; height:auto; margin-bottom:15px;">
+              <h3 style="color:#00ff99; margin:0;">Carla S.</h3>
+              <p style="font-size:14px;">⭐⭐⭐⭐⭐</p>
+              <p style="font-style:italic;">"Inacreditável! Consegui dominar meus concorrentes e hoje faturo <b>10x mais que antes</b>. Só agradeço!"</p>
+              <span style="background:#ffcc00; color:#000; padding:4px 8px; border-radius:6px; font-size:12px;">🔒 Aprovado Oficialmente</span>
+            </div>
+
+            <!-- Roberto -->
+            <div style="background-color:#002d26; border-radius:12px; padding:20px; width:300px;">
+              <img src="imagens/roberto.jpg" alt="Roberto M." style="border-radius:8px; width:100%; height:auto; margin-bottom:15px;">
+              <h3 style="color:#00ff99; margin:0;">Roberto M.</h3>
+              <p style="font-size:14px;">⭐⭐⭐⭐⭐</p>
+              <p style="font-style:italic;">"As táticas de manipulação do algoritmo mudaram meu jogo completamente. <b>Recomendo sem pensar duas vezes!</b>"</p>
+              <span style="background:#ffcc00; color:#000; padding:4px 8px; border-radius:6px; font-size:12px;">🔒 Aprovado Oficialmente</span>
+            </div>
+
+          </div>
+
+          <p style="text-align:center; font-size:13px; margin-top:40px; opacity:0.6;">
+            🔄 Depoimentos atualizados nas últimas 48h. Resultados reais de quem aplicou o conteúdo.
+          </p>
         </section>
 
         <!-- Bonus Section -->
@@ -273,15 +301,91 @@
                 <p class="action-text"><strong>Quem sabe, age. Quem hesita, fica pra trás.</strong></p>
             </div>
         </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2025 - Manual Oculto - Todos os direitos reservados</p>
+        </footer>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 - Manual Oculto - Todos os direitos reservados</p>
-    </footer>
-
     <script>
-        // Contador regressivo de 24 horas
+        // Inicializa o contador regressivo imediatamente
+        startTimer();
+        
+        // Função para inicializar o player do Vimeo
+        function initializeVimeoPlayer() {
+            try {
+                const player = new Vimeo.Player('vimeo-player', {
+                    autoplay: true,
+                    controls: false,
+                    loop: false,
+                    muted: true,
+                    background: false,
+                    quality: '1080p'
+                });
+
+                // Configura o botão de ativar áudio
+                const unmuteButton = document.getElementById('unmute-button');
+                const unmuteOverlay = document.querySelector('.unmute-overlay');
+
+                unmuteButton.addEventListener('click', function() {
+                    player.setVolume(1);
+                    player.setMuted(false);
+                    unmuteOverlay.style.opacity = '0';
+                    setTimeout(() => {
+                        unmuteOverlay.style.display = 'none';
+                    }, 300);
+                });
+                
+                // Configura o player
+                Promise.all([
+                    player.setAutopause(false),
+                    player.setLoop(false)
+                ]).then(() => {
+                    player.play().catch(console.error);
+                });
+
+                // Monitora o tempo do vídeo
+                player.on('timeupdate', function(data) {
+                    const videoTime = data.seconds;
+                    const restOfContent = document.getElementById('rest-of-content');
+                    
+                    // Mostra o conteúdo após 5 minutos e 25 segundos (325 segundos)
+                    if (videoTime >= 325 && restOfContent.style.display === 'none') {
+                        restOfContent.style.display = 'block';
+                        restOfContent.classList.add('visible');
+                    }
+                });
+
+                // Força o play se houver pausa
+                player.on('pause', () => {
+                    setTimeout(() => player.play(), 100);
+                });
+
+                // Monitora erros
+                player.on('error', function(error) {
+                    console.error('Erro no player:', error);
+                    setTimeout(() => player.play(), 1000);
+                });
+
+            } catch (error) {
+                console.error('Erro ao inicializar o player:', error);
+            }
+        }
+
+        // Garante que o script do Vimeo está carregado antes de inicializar
+        if (window.Vimeo) {
+            initializeVimeoPlayer();
+        } else {
+            var checkVimeo = setInterval(function() {
+                if (window.Vimeo) {
+                    clearInterval(checkVimeo);
+                    initializeVimeoPlayer();
+                }
+            }, 100);
+        }
+
+        // Função do contador regressivo
         function startTimer() {
             const hours = 0;
             const minutes = 20;
@@ -306,9 +410,6 @@
                 document.getElementById('seconds').textContent = String(s).padStart(2, '0');
             }, 1000);
         }
-        
-        // Inicia o contador quando a página carrega
-        window.onload = startTimer;
     </script>
 </body>
 </html> 
