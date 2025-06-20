@@ -21,14 +21,6 @@
         <div class="warning-message">
             <span>⚠️ Manual que já foi censurado duas vezes. Acesso por tempo limitado.</span>
         </div>
-
-        <!-- Countdown Timer -->
-        <div class="countdown-timer">
-            <p>⏰ Oferta expira em:</p>
-            <div id="timer">
-                <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
-            </div>
-        </div>
     </div>
 
     <!-- Video Section -->
@@ -50,8 +42,8 @@
                     <span class="unmute-text">CLIQUE PARA ATIVAR O ÁUDIO</span>
                 </button>
             </div>
-            <div id="video-progress-bar-container" style="position:absolute;left:0;right:0;bottom:0;height:8px;width:100%;background:rgba(255,255,255,0.08);border-radius:0 0 12px 12px;overflow:hidden;z-index:10;">
-                <div id="video-progress-bar" style="height:100%;width:0;background:linear-gradient(90deg,#FFD600,#f59e0b);transition:width 0.2s;"></div>
+            <div id="video-progress-bar-container" style="position:absolute;left:0;right:0;bottom:0;height:15px;width:100%;background:rgba(255,255,255,0.08);border-radius:0 0 12px 12px;overflow:hidden;z-index:10;">
+                <div id="video-progress-bar" style="height:100%;width:0;background:linear-gradient(90deg,#ff0000,#cc0000);transition:width 0.2s;"></div>
             </div>
         </div>
         <p class="video-caption">
@@ -70,6 +62,14 @@
     </div>
 
     <div id="conteudo-bloqueado" style="display:none;">
+        <!-- Countdown Timer -->
+        <div class="countdown-timer">
+            <p>⏰ Oferta expira em:</p>
+            <div id="timer">
+                <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+            </div>
+        </div>
+
         <!-- Benefits Section -->
         <section class="benefits-section">
             <h2 class="section-title">O MANUAL OCULTO É A ÚNICA SOLUÇÃO PARA TODOS SEUS PROBLEMAS.</h2>
@@ -367,9 +367,6 @@
     </div>
 
     <script>
-        // Inicializa o contador regressivo imediatamente
-        startTimer();
-        
         // Função para inicializar o player do Vimeo
         function initializeVimeoPlayer() {
             try {
@@ -395,11 +392,22 @@
                     }, 300);
                 });
                 
-                // Barra de progresso do vídeo
+                // Barra de progresso do vídeo (3x mais rápida até 3 minutos)
                 const progressBar = document.getElementById('video-progress-bar');
                 player.on('timeupdate', function(data) {
                     if (data.duration > 0) {
-                        const percent = (data.seconds / data.duration) * 100;
+                        let adjustedSeconds = data.seconds;
+                        
+                        // Se estiver nos primeiros 3 minutos (180 segundos), acelera 3x
+                        if (data.seconds <= 180) {
+                            adjustedSeconds = data.seconds * 3;
+                            // Não pode passar da duração total
+                            if (adjustedSeconds > data.duration) {
+                                adjustedSeconds = data.duration;
+                            }
+                        }
+                        
+                        const percent = (adjustedSeconds / data.duration) * 100;
                         progressBar.style.width = percent + '%';
                     }
                 });
@@ -409,6 +417,8 @@
                     const bloqueado = document.getElementById('conteudo-bloqueado');
                     if (bloqueado) {
                         bloqueado.style.display = 'block';
+                        // Inicializa o contador regressivo quando o vídeo finalizar
+                        startTimer();
                     }
                 });
 
@@ -434,10 +444,10 @@
             }, 100);
         }
 
-        // Função do contador regressivo
+        // Função do contador regressivo (agora 15 minutos)
         function startTimer() {
             const hours = 0;
-            const minutes = 20;
+            const minutes = 15;
             const seconds = 0;
             
             let totalSeconds = hours * 3600 + minutes * 60 + seconds;
